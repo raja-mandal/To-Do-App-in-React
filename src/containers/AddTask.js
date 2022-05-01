@@ -7,7 +7,7 @@ import { FaPlus } from "react-icons/fa";
 
 function AddTask() {
   const [getData, setData] = useState([])
-  const [taskVal, setTaskVal] = useState('')
+  const [taskVal, setTaskVal] = useState()
 
   const handleFormSubmit = async (e) => {
     e.preventDefault()
@@ -15,6 +15,7 @@ function AddTask() {
     await axiosInstance.post(`todo`, dataConfig)
     loadUser()
     console.log(taskVal)
+    setTaskVal('')
   }
 
   useEffect(() => {
@@ -31,12 +32,15 @@ function AddTask() {
         <div className="add__task--wrapper">
             <div className="flex__wrapper">
                 <div className="task__input--field">
-                    <input
-                        type="text"
-                        placeholder="Write here"
-                        onChange={(e) => setTaskVal(e.target.value)}
-                        className="input__task"
-                    />
+                    <form>
+                        <input
+                            type="text"
+                            placeholder="Write here"
+                            className="input__task"
+                            value={taskVal || ""}
+                            onChange={(e) => setTaskVal(e.target.value)}
+                        />
+                    </form>
                 </div>
                 <div className="add__task--btn" onClick={handleFormSubmit}>
                    <FaPlus color="#fff" className='plus__icon'/>
