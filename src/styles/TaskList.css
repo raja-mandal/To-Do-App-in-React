@@ -1,0 +1,21 @@
+.task__list--wrapper ul {
+    list-style-type: none;
+}
+
+.task__list {
+    font-size: 20px;
+}
+
+.task__list .action__icon {
+    font: 10px;
+    /* color: #6ce4d3; */
+    cursor: pointer;
+}
+
+.task__list > .right-icon {
+    margin-left: 20px;
+}
+
+.task__list > .close-icon {
+    margin-left: 10px;
+}

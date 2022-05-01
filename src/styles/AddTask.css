@@ -1,0 +1,51 @@
+.add__task--wrapper {
+    width: 30%;
+    margin : 0 auto;
+    display: flex;
+    padding-top: 50px;
+    border-radius: 0 !important;
+    gap: 10px;
+}
+
+.input__task {
+    width: 100%;
+    height: 40px;
+    border-radius: 24px;
+    border: 0;
+    padding: 0 0 0 14px;
+}
+
+.empty__files {
+    height: 17rem;
+    margin-top: 100px;
+}
+
+.flex__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task__input--field {
+    width: 30rem;
+}
+
+.add__task--btn {
+    background-color: #6ce4d3;
+    height: 42px;
+    width: 42px;
+    border-radius: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+
+.plus__icon {
+    font-size: 26px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
